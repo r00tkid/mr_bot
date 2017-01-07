@@ -1,0 +1,8 @@
+certifi==2016.9.26
+colored==1.3.3
+emoji==0.3.9
+future==0.16.0
+mr-logger==0.2
+python-telegram-bot==5.3.0
+termcolor==1.1.0
+urllib3==1.19.1
