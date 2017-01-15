@@ -5,7 +5,7 @@ import unittest
 from telegram import Bot
 from sender import Sender, logger
 
-TEST_BOT_TOKEN = '306343134:AAFe0BfoSWR39APT5Aq-SZGiYx5lgAL3fNw'
+TEST_BOT_TOKEN = ''
 TEST_CHAT_ID = 161933860
 bot = Bot(token=TEST_BOT_TOKEN)
 
