@@ -7,7 +7,7 @@ setup(
   name='mr_bot',
   packages=['mr_bot'],
   version='0.8',
-  description='Small package for assist telegram bot development',
+  description='Small package for assisting telegram bot development',
   author='Root Kid',
   author_email='shaman@born2fish.ru',
   url='https://github.com/r00tkid/mr_bot.git',
