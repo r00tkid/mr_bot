@@ -54,4 +54,4 @@ class Sender:
     def send_bunch_of_messages(self, users, text, photo=None):
         """ will send message for each user in users list """
         for user in users:
-            self.send_message(chat_id=user.from_user.id, text=text, photo=photo)
+            self.send_message(chat_id=user.id, text=text, photo=photo)
