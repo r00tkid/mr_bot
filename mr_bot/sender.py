@@ -50,10 +50,3 @@ class Sender:
         except Exception as e:
             logger.err(e)
         return False
-
-    def send_bunch_of_messages(self, users, text, photo=None):
-        """ will send message for each user in users list """
-        logger.log(text)
-        for user in users:
-            logger.log(user.id)
-            self.send_message(chat_id=user.id, text=text, photo=photo)
