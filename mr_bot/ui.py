@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-from sender import Sender
-from keyboard import KeyboardBuilder
+from mr_bot.sender import Sender
+from mr_bot.keyboard import KeyboardBuilder
 
 DEFAULT_LANGUAGE = 'EN'
 kb = KeyboardBuilder()
