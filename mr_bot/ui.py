@@ -27,7 +27,7 @@ def send_reponse_on_language_select_action(lang, user_id, bot, keyboard):
 def send_validate_city_keyboard(lang, user_id, bot, validated):
     """ validated is None or Location (pygeo) """
     sender = Sender(bot=bot)
-    if lang is 'ru':
+    if lang == 'ru':
         text = 'К сожалению город не найден, попробуйте еще раз.'
         btn_caption_yes = 'Да'
         btn_caption_no = 'Нет'
