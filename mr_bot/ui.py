@@ -48,7 +48,7 @@ def send_validate_city_keyboard(lang, user_id, bot, validated):
 
 def send_manage_folders_keyboard(lang, user_id, bot):
     sender = Sender(bot=bot)
-    if lang is 'ru':
+    if lang == 'ru':
         message_text = "Перешел в раздел управления папками"
         keyboard = [['<:file_folder:> Добавить папку', '<:pouch:> Список папок'],
         ['<:back:> Назад']]
