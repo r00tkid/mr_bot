@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+__pycache__*
+*.nja
 *$py.class
 
 # C extensions
@@ -87,3 +89,4 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
