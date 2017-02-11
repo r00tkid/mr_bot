@@ -18,8 +18,10 @@ class Sender:
     def __init__(self, bot):
         self.bot = bot
 
+    # todo venue
     def send_message(self, chat_id, text=None, photo=None, video=None, document=None,
-                     voice=None, audio=None, reply_markup=None, reply_to_message_id=None):
+                     voice=None, audio=None, sticker=None, location=None, contact=None,
+                     reply_markup=None, reply_to_message_id=None):
         try:
             if text:
                 self.bot.sendMessage(chat_id=chat_id,
@@ -40,6 +42,17 @@ class Sender:
             elif audio:
                 self.bot.sendAudio(chat_id=chat_id, audio=audio, reply_markup=reply_markup,
                                    reply_to_message_id=reply_to_message_id)
+            elif sticker:
+                self.bot.sendSticker(chat_id=chat_id, sticker=sticker, reply_markup=reply_markup,
+                    reply_to_message_id=reply_to_message_id)
+            elif location:
+                self.bot.sendLocation(chat_id=chat_id, latitude=location.latitude,
+                                      longitude=location.longitude, reply_markup=reply_markup,
+                                      reply_to_message_id=reply_to_message_id)
+            elif contact:
+                self.bot.sendContact(chat_id=chat_id, phone_number=contact.phone_number,
+                                     first_name=contact.first_name, reply_markup=reply_markup,
+                                     reply_to_message_id=reply_to_message_id)
             return True
         except BadRequest as bad_request_exception:
             logger.warn(traceback.format_exception_only(type(bad_request_exception),
