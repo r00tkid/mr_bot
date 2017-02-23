@@ -57,7 +57,7 @@ class KeyboardBuilder:
         """ basic method for get reply keyboard """
         keyboard = self._basic_prepare(keyboard=keyboard)
         return ReplyKeyboardMarkup(keyboard=keyboard, one_time_keyboard=is_one_time,
-                    selective=is_selective)
+                    selective=is_selective, resize_keyboard=True)
 
     def get_inline_keyboard(self, keyboard, callbacks):
         """ method for get inline keyboard """
