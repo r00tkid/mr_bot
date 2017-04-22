@@ -18,9 +18,9 @@ class Sender:
     def __init__(self, bot):
         self.bot = bot
 
-    def edit_message_text(self, message_id, text, reply_markup):
+    def edit_message_text(self, message_id, chat_id, text, reply_markup):
         try:
-            self.bot.editMessageText(message_id=message_id,
+            self.bot.editMessageText(message_id=message_id, chat_id=chat_id,
                                                             text=text, reply_markup=reply_markup)
             return True
         except BadRequest as bad_request_exception:
