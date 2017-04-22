@@ -1,0 +1,4 @@
+# -*- coding: utf-8 -*-
+
+TEST_BOT_TOKEN = '378594364:AAHe9LzCvz3Jj_dZwIAOCI4ZlO_ilcutJIc'
+TEST_CHAT_ID = 161933860

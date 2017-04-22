@@ -4,8 +4,8 @@
 import unittest
 from telegram import Bot
 from sender import Sender, logger
-TEST_BOT_TOKEN = '-'
-TEST_CHAT_ID = 1111111
+from settings import TEST_BOT_TOKEN, TEST_CHAT_ID
+
 bot = Bot(token=TEST_BOT_TOKEN)
 
 
@@ -20,8 +20,3 @@ class SenderTest(unittest.TestCase):
         else:
             logger.err('message was not send')
         self.assertTrue(result)
-
-
-
-
-

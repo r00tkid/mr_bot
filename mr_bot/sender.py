@@ -18,6 +18,21 @@ class Sender:
     def __init__(self, bot):
         self.bot = bot
 
+    def edit_message_text(self, message_id, text, reply_markup):
+        try:
+            self.bot.editMessageText(message_id=message_id,
+                                                            text=text, reply_markup=reply_markup)
+            return True
+        except BadRequest as bad_request_exception:
+            logger.warn(traceback.format_exception_only(type(bad_request_exception),
+            bad_request_exception))
+        except Unauthorized:
+            logger.warn('[Unauthorized]: cant edit message text.\nID=%s' % str(message_id))
+        except Exception as e:
+            logger.err(e)
+        return False
+
+
     def edit_inline_message_text(self, inline_message_id, text, reply_markup):
         try:
             self.bot.editMessageText(inline_message_id=inline_message_id,
