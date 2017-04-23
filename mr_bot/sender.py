@@ -18,10 +18,11 @@ class Sender:
     def __init__(self, bot):
         self.bot = bot
 
-    def edit_message_text(self, message_id, chat_id, text, reply_markup):
+    def edit_message_text(self, message_id, chat_id, text, reply_markup, parse_mode='HTML'):
         try:
             self.bot.editMessageText(message_id=message_id, chat_id=chat_id,
-                                                            text=text, reply_markup=reply_markup)
+                                                            text=text, reply_markup=reply_markup,
+                                                            parse_mode=parse_mode)
             return True
         except BadRequest as bad_request_exception:
             logger.warn(traceback.format_exception_only(type(bad_request_exception),
