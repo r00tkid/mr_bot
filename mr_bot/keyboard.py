@@ -64,8 +64,8 @@ class KeyboardBuilder:
         return ReplyKeyboardMarkup(keyboard=keyboard, one_time_keyboard=is_one_time,
                     selective=is_selective, resize_keyboard=True)
 
-    def get_inline_keyboard(self, keyboard, callbacks):
+    def get_inline_keyboard(self, keyboard, callbacks, urls=None):
         """ method for get inline keyboard """
         keyboard = self._basic_prepare(keyboard)
-        inline_keyboard = self._inline_prepare(keyboard=keyboard, callbacks=callbacks)
+        inline_keyboard = self._inline_prepare(keyboard=keyboard, callbacks=callbacks, urls=urls)
         return InlineKeyboardMarkup(inline_keyboard=inline_keyboard)
