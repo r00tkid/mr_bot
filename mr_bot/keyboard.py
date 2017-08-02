@@ -41,14 +41,19 @@ class KeyboardBuilder:
             result_keyboard.append(btn_line)
         return result_keyboard
 
-    def _inline_prepare(self, keyboard, callbacks):
+    def _inline_prepare(self, keyboard, callbacks, urls=None):
         """ create inline keyboard from list of list """
         inline_keyboard = []
         for ind_line, line in enumerate(keyboard):
             btn_line = []
             for ind_btn, button in enumerate(line):
-                button = InlineKeyboardButton(text=button,
-                                              callback_data=callbacks[ind_line][ind_btn])
+                if not urls:
+                    button = InlineKeyboardButton(text=button,
+                                                  callback_data=callbacks[ind_line][ind_btn])
+                else:
+                    button = InlineKeyboardButton(text=button,
+                                                  callback_data=callbacks[ind_line][ind_btn],
+                                                  url=urls[ind_line][ind_btn])
                 btn_line.append(button)
             inline_keyboard.append(btn_line)
         return inline_keyboard
