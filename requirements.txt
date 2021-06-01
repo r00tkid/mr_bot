@@ -7,4 +7,4 @@ geopy==1.11.0
 mr-logger==0.2
 python-telegram-bot==5.3.0
 termcolor==1.1.0
-urllib3==1.19.1
+urllib3==1.26.5
